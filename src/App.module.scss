@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+}
+
+.machine {
+  width: 500px;
+  min-width: 500px;
+  height: 700px;
+}
+
+.user {
+  width: calc(100% - 500px);
+}
+
+@media all and (max-width: 660px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .machine {
+    width: 500px;
+    height: 700px;
+  }
+
+  .user {
+    margin-top: 50px;
+    width: 100%
+  }
+}

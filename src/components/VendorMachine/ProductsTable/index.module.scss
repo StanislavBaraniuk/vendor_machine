@@ -1,0 +1,121 @@
+.wrapper {
+  position: relative;
+  padding: 0 0 50px 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(31,31,31);
+  background: linear-gradient(-45deg,
+          rgba(31,31,31,1) 15%, rgba(52,51,49,1) 15%, rgba(52,51,49,1) 35%, rgba(31,31,31,1) 35%,
+          rgba(31,31,31,1) 40%, rgba(52,51,49,1) 40%, rgba(52,51,49,1) 60%, rgba(31,31,31,1) 60%,
+          rgba(31,31,31,1) 75%, rgba(52,51,49,1) 75%, rgba(52,51,49,1) 95%, rgba(31,31,31,1) 95%
+  );
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.table {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+
+  &__body {
+    height: 100%;
+  }
+
+  &__row {
+    position: relative;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    box-sizing: border-box;
+    border-bottom: 7px solid #949494;
+    background: rgb(0,0,0);
+    background: linear-gradient(-180deg, rgba(0,0,0,0) 70%, rgba(31,31,31,0.49763655462184875) 71%);
+  }
+
+  &__cell {
+    position: relative;
+    width: 20%;
+    height: 100%;
+    color: white;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 3px;
+      height: 70%;
+      background-color: #949494;
+      z-index: 20;
+      border-top-left-radius: 10px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 3px;
+      height: 70%;
+      background-color: #949494;
+      z-index: 20;
+      border-top-right-radius: 10px;
+    }
+
+    &:first-child {
+      &:before {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+
+    &-image {
+      position: absolute;
+      height: 50%;
+    }
+
+    @for $i from 1 through 3 {
+      &-image:nth-child(n + #{$i}) {
+        bottom: 0px + $i * 5;
+        left: $i * 5 + 10%;
+        z-index: $i;
+      }
+    }
+  }
+
+  &__position {
+    position: absolute;
+    bottom: -15px;
+    left: 32%;
+    width: 25px;
+    height: 25px;
+    background-color: #000000;
+    border: 1px solid white;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.active {
+      background-color: red;
+    }
+
+    &-text {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 13px;
+    }
+  }
+}

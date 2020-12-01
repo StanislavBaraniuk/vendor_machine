@@ -1,0 +1,96 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #c7c6c4;
+  border-radius: 5px;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #f3fffb;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #f3fffb;
+  }
+}
+
+.cash {
+  position: relative;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: 30%;
+  background-color: #ffffff;
+  border-radius: 5px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 20%;
+    background-color: #2a2927;
+    margin-top: 12%;
+    margin-left: 10%;
+    border-radius: 5px;
+  }
+}
+
+.coins {
+  position: relative;
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 40%;
+  height: 40%;
+  background-color: #ffffff;
+  border-radius: 100%;
+  float: left;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 15%;
+    height: 60%;
+    background-color: #2a2927;
+    margin-top: 15%;
+    margin-left: 43%;
+    border-radius: 5px;
+  }
+}
+
+.cancel {
+  float: none;
+  margin-top: 5%;
+  margin-left: 50%;
+  width: 40%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 2px solid #4c4b49;
+  background-color: #4f4e4c;
+  outline: none;
+  cursor: pointer;
+
+  &__text {
+    color: #cc2328;
+  }
+
+  &:hover {
+    background-color: #959491;
+  }
+}

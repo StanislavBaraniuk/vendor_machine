@@ -1,0 +1,108 @@
+.wrapper {
+  position: relative;
+  padding: 5% 2% 2% 2%;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 5px solid black;
+  background-color: #cb2328;
+  z-index: 0;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #ffa2ad;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background-color: #ffa2ad;
+  }
+}
+
+.top {
+  width: 100%;
+  height: 80%;
+  display: flex;
+
+  &__left {
+    width: 80%;
+    height: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 5px solid black;
+  }
+
+  &__right {
+    padding: 2%;
+    margin-left: 3%;
+    width: 26%;
+    height: 100%;
+    background-color: #791d25;
+    border-radius: 5px;
+    border: 5px solid #4b210d;
+    box-sizing: border-box;
+
+    &-screen {
+      width: 100%;
+      height: 10%;
+      margin-top: 5%;
+    }
+
+    &-coinReceiver {
+      margin-top: 15%;
+      width: 100%;
+      height: 15%;
+    }
+
+    &-keyboard {
+      margin-top: 15%;
+    }
+
+    &-coinsEjector {
+      width: 100%;
+      height: 15%;
+      margin-top: 15%;
+    }
+
+    &-empty {
+      margin-top: 15%;
+      width: 100%;
+      height: 20%;
+      border-radius: 5px;
+      background-color: #982329;
+    }
+  }
+}
+
+.bottom {
+  margin-top: 5%;
+  width: 100%;
+  height: 15%;
+  border: 5px solid black;
+  box-sizing: border-box;
+}
+
+.floor {
+  position: absolute;
+  height: 5%;
+  bottom: -5%;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  border: 5px solid black;
+  background: rgb(55,54,52);
+  background: linear-gradient(360deg, rgba(55,54,52,1) 60%, rgba(31,31,31,1) 60%);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
